@@ -1,0 +1,98 @@
+:root{
+  --primary: #d81e5b;
+  --secondary: #8c38ff;
+  --dark: #131a26;
+  --light: #eee;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+body{
+  background-color: rgb(218, 199, 198)
+}
+
+.heading{
+  margin: 15px;
+  padding: 12px;
+}
+
+
+.App{
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.calculator{
+  
+  width: 100%;
+  max-width: 400px ;
+  background-color: #FFF;
+  border-radius: 16px;
+  overflow: hidden;
+  /* overflow hidden border radi ke bahar jo btn ja rha tha usko chhupa dega*/
+  box-shadow: 0px 2px 64px rgba(0,0,0,0.2);
+}
+
+.display{
+  text-align: right;
+  padding: 16px;
+ 
+  background-color: var(--dark);
+  color: var(--light);
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.display span{
+  font-size: 14px;
+  color: #888;
+}
+
+button{
+  appearance: none;
+  border: none;
+  outline: none;
+  color: #FFF;
+  font-size: 20px;
+  padding: 16px;
+  cursor: pointer;
+  transition: 0.4s ;
+}
+
+button:hover{
+  opacity: 0.9;
+}
+
+.operators {
+ 
+  display: flex;
+}
+
+.operators button{
+  flex: 1 1 0% ;
+  /* The item is sized according to its width and height properties, but grows to absorb any extra free space in the flex container, and shrinks to its minimum size to fit the container.  */
+  background-color: var(--primary);
+  font-weight: 700;
+}
+
+.digits{
+  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.digits button{
+  flex: 1 1 33.333%;
+  max-width:33.333% ;
+  background-color: var(--dark) ;
+}
+
